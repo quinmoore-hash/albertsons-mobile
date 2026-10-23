@@ -32,8 +32,16 @@ struct AdItem: Identifiable, Hashable {
 @MainActor
 final class AppStore: ObservableObject {
     @Published var cart: [String: Int] = [:]
-    @Published var clippedCouponIds: Set<String> = []
+    @Published var clippedCouponIds: Set<String> {
+        didSet { UserDefaults.standard.set(Array(clippedCouponIds), forKey: Self.clippedKey) }
+    }
     @Published var recentOrderIds: [String] = ["p3", "p7", "p12"]
+
+    private static let clippedKey = "clippedCouponIds"
+
+    init() {
+        clippedCouponIds = Set(UserDefaults.standard.stringArray(forKey: Self.clippedKey) ?? [])
+    }
 
     let catalog: [Product] = SampleData.products
     let coupons: [Coupon] = SampleData.coupons
@@ -58,6 +66,12 @@ final class AppStore: ObservableObject {
     }
 
     func clip(_ coupon: Coupon) { clippedCouponIds.insert(coupon.id) }
+
+    func isClipped(_ coupon: Coupon) -> Bool { clippedCouponIds.contains(coupon.id) }
+
+    var allClipped: Bool { coupons.allSatisfy(isClipped) }
+
+    func clipAll() { clippedCouponIds.formUnion(coupons.map(\.id)) }
 }
 
 enum SampleData {
