@@ -29,10 +29,10 @@ struct PriceText: View {
     var body: some View {
         HStack(spacing: 6) {
             if let sale = salePrice {
-                Text(sale, format: .currency(code: "USD")).bold().foregroundStyle(Theme.red)
-                Text(price, format: .currency(code: "USD")).strikethrough().foregroundStyle(.secondary).font(.caption)
+                Text(sale, format: .currency(code: "USD").locale(Locale(identifier: "en_US"))).bold().foregroundStyle(Theme.red)
+                Text(price, format: .currency(code: "USD").locale(Locale(identifier: "en_US"))).strikethrough().foregroundStyle(.secondary).font(.caption)
             } else {
-                Text(price, format: .currency(code: "USD")).bold()
+                Text(price, format: .currency(code: "USD").locale(Locale(identifier: "en_US"))).bold()
             }
         }
     }
