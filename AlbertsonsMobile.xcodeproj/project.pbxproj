@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		918DB4411FB3E4D5D429A74D /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9B51C914F480D738E5F0 /* DealsView.swift */; };
+		96DD92400AE579C4EAA99A30 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE971EE92B602A7286E7345 /* Theme.swift */; };
+		9CF2C5D4BCB8A75EF9E3FD2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4765AA8A79F9DD6A6682C7 /* HomeView.swift */; };
+		BE923833E99DF358EA9809ED /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54755FB09C847CCF4FF5FD4 /* Models.swift */; };
+		BEDDD30FF49D28EEECAF18A4 /* AlbertsonsMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531D9F62BF8AC81A19507987 /* AlbertsonsMobileApp.swift */; };
+		BEE1D041ECB258D1E15F067F /* WeeklyAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1549BB35F97EFFE91B1F7B6 /* WeeklyAdView.swift */; };
+		D8E2021F68305106067ED69C /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D825A4EEC3F573A810CC384B /* SearchService.swift */; };
+		E6551669EC967E4900E4A1B5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480C5943C9C26FB1B11E3A3 /* SearchView.swift */; };
+		EABB4E5F3D2CBB51E005B6EE /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE457BC5B717C6D0BDFFD52A /* CartView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F5B5AD5A542C56EA1B0E3AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1DE971EE92B602A7286E7345 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1F0D9B51C914F480D738E5F0 /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
+		4F4765AA8A79F9DD6A6682C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		531D9F62BF8AC81A19507987 /* AlbertsonsMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertsonsMobileApp.swift; sourceTree = "<group>"; };
+		BA901495F7884F60C4A9249B /* AlbertsonsMobile.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AlbertsonsMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1549BB35F97EFFE91B1F7B6 /* WeeklyAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyAdView.swift; sourceTree = "<group>"; };
+		CE457BC5B717C6D0BDFFD52A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		D825A4EEC3F573A810CC384B /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		E54755FB09C847CCF4FF5FD4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F480C5943C9C26FB1B11E3A3 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3745F8631024EA75A0780DD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA901495F7884F60C4A9249B /* AlbertsonsMobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D11044D094D64C80B2A0DB0 = {
+			isa = PBXGroup;
+			children = (
+				BE7025DDF83F4E942F4B8D92 /* AlbertsonsMobile */,
+				3745F8631024EA75A0780DD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7928EF747239BBBC90E0505B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE457BC5B717C6D0BDFFD52A /* CartView.swift */,
+				1F0D9B51C914F480D738E5F0 /* DealsView.swift */,
+				4F4765AA8A79F9DD6A6682C7 /* HomeView.swift */,
+				F480C5943C9C26FB1B11E3A3 /* SearchView.swift */,
+				C1549BB35F97EFFE91B1F7B6 /* WeeklyAdView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE7025DDF83F4E942F4B8D92 /* AlbertsonsMobile */ = {
+			isa = PBXGroup;
+			children = (
+				531D9F62BF8AC81A19507987 /* AlbertsonsMobileApp.swift */,
+				0F5B5AD5A542C56EA1B0E3AC /* Info.plist */,
+				E54755FB09C847CCF4FF5FD4 /* Models.swift */,
+				D825A4EEC3F573A810CC384B /* SearchService.swift */,
+				1DE971EE92B602A7286E7345 /* Theme.swift */,
+				7928EF747239BBBC90E0505B /* Views */,
+			);
+			path = AlbertsonsMobile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65533ACCD62483F8F360A25F /* AlbertsonsMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 127A875B68C126BAE7F97D00 /* Build configuration list for PBXNativeTarget "AlbertsonsMobile" */;
+			buildPhases = (
+				099E9B221A14DAF077305A36 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlbertsonsMobile;
+			packageProductDependencies = (
+			);
+			productName = AlbertsonsMobile;
+			productReference = BA901495F7884F60C4A9249B /* AlbertsonsMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		806A763E2564F9C8EBC27143 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 3BDCB5BE2DC4DF28028188F4 /* Build configuration list for PBXProject "AlbertsonsMobile" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 5D11044D094D64C80B2A0DB0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3745F8631024EA75A0780DD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65533ACCD62483F8F360A25F /* AlbertsonsMobile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		099E9B221A14DAF077305A36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDDD30FF49D28EEECAF18A4 /* AlbertsonsMobileApp.swift in Sources */,
+				EABB4E5F3D2CBB51E005B6EE /* CartView.swift in Sources */,
+				918DB4411FB3E4D5D429A74D /* DealsView.swift in Sources */,
+				9CF2C5D4BCB8A75EF9E3FD2F /* HomeView.swift in Sources */,
+				BE923833E99DF358EA9809ED /* Models.swift in Sources */,
+				D8E2021F68305106067ED69C /* SearchService.swift in Sources */,
+				E6551669EC967E4900E4A1B5 /* SearchView.swift in Sources */,
+				96DD92400AE579C4EAA99A30 /* Theme.swift in Sources */,
+				BEE1D041ECB258D1E15F067F /* WeeklyAdView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1459A425DF96FEEEE4A9B768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = AlbertsonsMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.AlbertsonsMobile;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5F2D0BD71609E6F6B79499EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = AlbertsonsMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.AlbertsonsMobile;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		70CE8EDC6565D8A42200A109 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		815955949D9A171DD41BB3D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		127A875B68C126BAE7F97D00 /* Build configuration list for PBXNativeTarget "AlbertsonsMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1459A425DF96FEEEE4A9B768 /* Debug */,
+				5F2D0BD71609E6F6B79499EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3BDCB5BE2DC4DF28028188F4 /* Build configuration list for PBXProject "AlbertsonsMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70CE8EDC6565D8A42200A109 /* Debug */,
+				815955949D9A171DD41BB3D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 806A763E2564F9C8EBC27143 /* Project object */;
+}
