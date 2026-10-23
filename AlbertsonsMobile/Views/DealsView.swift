@@ -16,6 +16,10 @@ struct DealsView: View {
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Deals")
+            .toolbar {
+                Button(store.allClipped ? "All clipped" : "Clip All") { store.clipAll() }
+                    .disabled(store.allClipped)
+            }
         }
     }
 }
@@ -23,9 +27,9 @@ struct DealsView: View {
 struct CouponRow: View {
     @EnvironmentObject var store: AppStore
     let coupon: Coupon
-    @State private var clipped = false
 
     var body: some View {
+        let clipped = store.isClipped(coupon)
         HStack(spacing: 12) {
             if let p = store.product(coupon.productId) { ProductThumb(symbol: p.symbol) }
             VStack(alignment: .leading, spacing: 3) {
@@ -34,10 +38,7 @@ struct CouponRow: View {
                 Text(coupon.expires).font(.caption).foregroundStyle(.secondary)
             }
             Spacer()
-            Button {
-                clipped = true
-                store.clip(coupon)
-            } label: {
+            Button { store.clip(coupon) } label: {
                 Label(clipped ? "Clipped" : "Clip", systemImage: clipped ? "checkmark" : "scissors")
                     .font(.caption.bold())
             }
