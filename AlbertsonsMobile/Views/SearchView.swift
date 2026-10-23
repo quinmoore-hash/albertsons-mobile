@@ -44,6 +44,7 @@ struct SearchView: View {
         isSearching = true
         searchTask = Task {
             let found = await SearchService(catalog: store.catalog).search(q)
+            guard !Task.isCancelled else { return }
             results = found
             isSearching = false
         }
