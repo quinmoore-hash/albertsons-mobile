@@ -11,10 +11,10 @@ struct WeeklyAdView: View {
                     Text("Valid Wed 10/22 – Tue 10/28").font(.subheadline).foregroundStyle(.secondary).padding(.horizontal)
                     LazyVGrid(columns: columns, spacing: 12) {
                         ForEach(store.adItems) { item in
-                            if let pid = item.linkedProductId, let product = store.product(pid) {
-                                NavigationLink(value: product) { AdTile(item: item) }.buttonStyle(.plain)
+                            if let product = item.linkedProductId.flatMap(store.product) {
+                                NavigationLink(value: product) { AdTile(item: item, product: product) }.buttonStyle(.plain)
                             } else {
-                                AdTile(item: item)
+                                AdTile(item: item, product: nil)
                             }
                         }
                     }
@@ -30,7 +30,9 @@ struct WeeklyAdView: View {
 }
 
 struct AdTile: View {
+    @EnvironmentObject var store: AppStore
     let item: AdItem
+    let product: Product?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -43,6 +45,16 @@ struct AdTile: View {
             ProductThumb(symbol: item.symbol, size: 80).frame(maxWidth: .infinity)
             Text(item.headline).font(.subheadline.bold())
             Text(item.subhead).font(.caption).foregroundStyle(.secondary).lineLimit(2)
+            if let product {
+                Button { store.addToCart(product) } label: {
+                    Text("Add").font(.subheadline.weight(.semibold)).frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered).tint(Theme.blue).clipShape(Capsule())
+            } else {
+                Label("In-store only", systemImage: "storefront")
+                    .font(.caption.weight(.medium)).foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, minHeight: 34)
+            }
         }
         .padding(12)
         .background(.white)

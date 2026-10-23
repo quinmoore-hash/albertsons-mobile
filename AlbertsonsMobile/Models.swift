@@ -25,7 +25,7 @@ struct AdItem: Identifiable, Hashable {
     let subhead: String
     let priceLabel: String
     let symbol: String
-    /// Only some ad items are linked to a product in the catalog.
+    /// Nil for in-store-only items that have no product in the catalog.
     let linkedProductId: String?
 }
 
@@ -97,13 +97,14 @@ enum SampleData {
 
     static let adItems: [AdItem] = [
         AdItem(id: "a1", headline: "Chicken Breast", subhead: "Signature Farms, family pack", priceLabel: "$8.99", symbol: "bird", linkedProductId: "p1"),
-        AdItem(id: "a2", headline: "Avocados", subhead: "Fresh Hass, each", priceLabel: "99¢", symbol: "leaf", linkedProductId: nil),
-        AdItem(id: "a3", headline: "Ground Beef", subhead: "80/20, 1 lb", priceLabel: "$4.99", symbol: "circle.grid.2x2", linkedProductId: nil),
-        AdItem(id: "a4", headline: "Cheerios", subhead: "Family size", priceLabel: "$3.99", symbol: "circle.hexagongrid", linkedProductId: nil),
+        AdItem(id: "a2", headline: "Avocados", subhead: "Fresh Hass, each", priceLabel: "99¢", symbol: "leaf", linkedProductId: "p5"),
+        AdItem(id: "a3", headline: "Ground Beef", subhead: "80/20, 1 lb", priceLabel: "$4.99", symbol: "circle.grid.2x2", linkedProductId: "p8"),
+        AdItem(id: "a4", headline: "Cheerios", subhead: "Family size", priceLabel: "$3.99", symbol: "circle.hexagongrid", linkedProductId: "p9"),
         AdItem(id: "a5", headline: "Coca-Cola", subhead: "12 pack cans", priceLabel: "$6.99", symbol: "cup.and.saucer", linkedProductId: "p11"),
-        AdItem(id: "a6", headline: "Cheese Pizza", subhead: "Signature Select rising crust", priceLabel: "$5.00", symbol: "chart.pie", linkedProductId: nil),
-        AdItem(id: "a7", headline: "Gala Apples", subhead: "Washington grown, per lb", priceLabel: "$1.49", symbol: "applelogo", linkedProductId: nil),
-        AdItem(id: "a8", headline: "Shrimp", subhead: "Wild caught, 1 lb bag", priceLabel: "$9.99", symbol: "fish", linkedProductId: nil),
-        AdItem(id: "a9", headline: "Eggs", subhead: "O Organics free range, dozen", priceLabel: "$4.99", symbol: "oval.portrait", linkedProductId: nil),
+        AdItem(id: "a6", headline: "Cheese Pizza", subhead: "Signature Select rising crust", priceLabel: "$5.00", symbol: "chart.pie", linkedProductId: "p12"),
+        AdItem(id: "a7", headline: "Gala Apples", subhead: "Washington grown, per lb", priceLabel: "$1.49", symbol: "applelogo", linkedProductId: "p13"),
+        AdItem(id: "a8", headline: "Shrimp", subhead: "Wild caught, 1 lb bag", priceLabel: "$9.99", symbol: "fish", linkedProductId: "p15"),
+        AdItem(id: "a9", headline: "Eggs", subhead: "O Organics free range, dozen", priceLabel: "$4.99", symbol: "oval.portrait", linkedProductId: "p3"),
+        AdItem(id: "a10", headline: "Floral Bouquets", subhead: "Fresh cut, floral department", priceLabel: "$12.99", symbol: "camera.macro", linkedProductId: nil),
     ]
 }
