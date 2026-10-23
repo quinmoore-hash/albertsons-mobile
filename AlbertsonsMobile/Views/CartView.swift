@@ -29,7 +29,7 @@ struct CartView: View {
                             }
                         }
                         Section {
-                            HStack { Text("Subtotal"); Spacer(); Text(store.cartTotal, format: .currency(code: "USD").locale(Locale(identifier: "en_US"))).bold() }
+                            HStack { Text("Subtotal"); Spacer(); Text(store.cartTotal.usd).bold() }
                             Button { } label: { Text("Checkout").frame(maxWidth: .infinity) }
                                 .buttonStyle(.borderedProminent).controlSize(.large)
                         }

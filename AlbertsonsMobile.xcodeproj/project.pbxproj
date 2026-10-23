@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0001B463E91BCDDD18BAB255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B1C5B0C0D95F784B33BA8F /* Assets.xcassets */; };
 		918DB4411FB3E4D5D429A74D /* DealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9B51C914F480D738E5F0 /* DealsView.swift */; };
 		96DD92400AE579C4EAA99A30 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE971EE92B602A7286E7345 /* Theme.swift */; };
 		9CF2C5D4BCB8A75EF9E3FD2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4765AA8A79F9DD6A6682C7 /* HomeView.swift */; };
@@ -24,6 +25,7 @@
 		1F0D9B51C914F480D738E5F0 /* DealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealsView.swift; sourceTree = "<group>"; };
 		4F4765AA8A79F9DD6A6682C7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		531D9F62BF8AC81A19507987 /* AlbertsonsMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbertsonsMobileApp.swift; sourceTree = "<group>"; };
+		84B1C5B0C0D95F784B33BA8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA901495F7884F60C4A9249B /* AlbertsonsMobile.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AlbertsonsMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1549BB35F97EFFE91B1F7B6 /* WeeklyAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyAdView.swift; sourceTree = "<group>"; };
 		CE457BC5B717C6D0BDFFD52A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				531D9F62BF8AC81A19507987 /* AlbertsonsMobileApp.swift */,
+				84B1C5B0C0D95F784B33BA8F /* Assets.xcassets */,
 				0F5B5AD5A542C56EA1B0E3AC /* Info.plist */,
 				E54755FB09C847CCF4FF5FD4 /* Models.swift */,
 				D825A4EEC3F573A810CC384B /* SearchService.swift */,
@@ -82,6 +85,7 @@
 			buildConfigurationList = 127A875B68C126BAE7F97D00 /* Build configuration list for PBXNativeTarget "AlbertsonsMobile" */;
 			buildPhases = (
 				099E9B221A14DAF077305A36 /* Sources */,
+				AAA24C491B23FFE9A320031C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +128,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		AAA24C491B23FFE9A320031C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0001B463E91BCDDD18BAB255 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		099E9B221A14DAF077305A36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -147,7 +162,7 @@
 		1459A425DF96FEEEE4A9B768 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AlbertsonsMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -164,7 +179,7 @@
 		5F2D0BD71609E6F6B79499EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AlbertsonsMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

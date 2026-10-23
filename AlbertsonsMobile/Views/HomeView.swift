@@ -6,10 +6,17 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    forUCard
-                    section("Buy It Again", products: store.recentOrderIds.compactMap(store.product))
-                    section("On Sale This Week", products: store.catalog.filter { $0.salePrice != nil })
+                VStack(alignment: .leading, spacing: 16) {
+                    fulfillmentRow
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 10) {
+                            Chip(title: "My rewards"); Chip(title: "Clipped deals"); Chip(title: "Weekly ad"); Chip(title: "Past purchases")
+                        }
+                        .padding(.horizontal)
+                    }
+                    dealsCard
+                    section("Must-have grabs", subtitle: "Find some new favorites.", products: store.catalog.filter { $0.salePrice != nil })
+                    section("Buy it again", subtitle: "Based on your past purchases.", products: store.recentOrderIds.compactMap(store.product))
                 }
                 .padding(.vertical)
             }
@@ -19,26 +26,51 @@ struct HomeView: View {
         }
     }
 
-    private var forUCard: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            HStack {
-                Text("for U™").font(.title3.bold())
-                Spacer()
-                Text("\(store.clippedCouponIds.count) clipped").font(.caption).padding(6).background(.white.opacity(0.2)).clipShape(Capsule())
+    private var fulfillmentRow: some View {
+        HStack(spacing: 14) {
+            Image(systemName: "line.3.horizontal").foregroundStyle(Theme.blue).font(.title3)
+            VStack(alignment: .leading, spacing: 2) {
+                HStack(spacing: 4) {
+                    Text("Pickup").font(.headline).foregroundStyle(Theme.blue)
+                    Image(systemName: "chevron.down").font(.caption.bold()).foregroundStyle(Theme.blue)
+                }
+                Text("189 Niblick Rd").font(.caption).foregroundStyle(.secondary)
             }
-            Text("Member since 2018 · 1,240 points").font(.subheadline)
-            Text("Clip deals before you shop to save at checkout.").font(.caption).opacity(0.9)
+            Spacer()
+            Text("Reserve a time").font(.subheadline.weight(.medium)).foregroundStyle(Theme.blue)
+                .padding(.horizontal, 14).padding(.vertical, 8)
+                .overlay(Capsule().stroke(Theme.blue, lineWidth: 1.5))
         }
-        .foregroundStyle(.white)
-        .padding()
-        .background(LinearGradient(colors: [Theme.navy, Theme.blue], startPoint: .topLeading, endPoint: .bottomTrailing))
-        .clipShape(RoundedRectangle(cornerRadius: 14))
         .padding(.horizontal)
     }
 
-    private func section(_ title: String, products: [Product]) -> some View {
+    private var dealsCard: some View {
+        HStack {
+            Image(systemName: "ticket").foregroundStyle(Theme.blue)
+            Text("See all ").foregroundStyle(Theme.navy) + Text("\(store.coupons.count) deals").bold().foregroundStyle(Theme.navy)
+            Spacer()
+            Text("Browse now").font(.subheadline.weight(.medium)).foregroundStyle(.white)
+                .padding(.horizontal, 14).padding(.vertical, 8).background(Theme.blue).clipShape(Capsule())
+        }
+        .padding(12)
+        .background(.white)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
+        .padding(.horizontal)
+    }
+
+    private func section(_ title: String, subtitle: String, products: [Product]) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title).font(.headline).padding(.horizontal)
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(title).font(.title3.bold()).foregroundStyle(Theme.navy)
+                    Text(subtitle).font(.caption).foregroundStyle(.secondary)
+                }
+                Spacer()
+                HStack(spacing: 2) { Text("See all"); Image(systemName: "chevron.right") }
+                    .font(.subheadline).foregroundStyle(Theme.blue)
+            }
+            .padding(.horizontal)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 12) {
                     ForEach(products) { p in
@@ -59,17 +91,19 @@ struct ProductCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             ProductThumb(symbol: product.symbol, size: 120)
-            Text(product.name).font(.subheadline).lineLimit(2).frame(height: 40, alignment: .top)
             PriceText(price: product.price, salePrice: product.salePrice).font(.subheadline)
+            Text(product.name).font(.subheadline.weight(.medium)).foregroundStyle(Theme.navy).lineLimit(2).frame(height: 40, alignment: .top)
+            Text(product.description).font(.caption2).foregroundStyle(.secondary).lineLimit(1)
             Button { store.addToCart(product) } label: {
-                Text("Add").frame(maxWidth: .infinity)
+                Text("Add").font(.subheadline.weight(.semibold)).frame(maxWidth: .infinity)
             }
-            .buttonStyle(.borderedProminent).controlSize(.small)
+            .buttonStyle(.bordered).tint(Theme.blue).clipShape(Capsule())
         }
-        .frame(width: 130)
+        .frame(width: 140)
         .padding(10)
         .background(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(.systemGray5)))
     }
 }
 
