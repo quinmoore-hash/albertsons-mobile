@@ -117,6 +117,7 @@ struct ProductRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(product.name).font(.subheadline.weight(.medium))
                 Text(product.description).font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                Label(product.aisle, systemImage: "mappin").font(.caption).foregroundStyle(.secondary)
                 PriceText(price: product.price, salePrice: product.salePrice).font(.subheadline)
             }
             Spacer()
